@@ -11,8 +11,9 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
             <LiIcon reference={ref} />
             <motion.div
                 initial={{ y: 50 }}
-                whileInView={{ y: 0 }}
-                transition={{duration:0.5, type:"spring" }}
+                whileInView={{ y: 0}}
+                transition={{ duration: 0.5, type: "spring" }}
+                viewport={{once:true}}
             >
                 <h3 className='capitalize font-bold text-2xl sm:text-xl xs:text-lg'>
                     {position} &nbsp;-&nbsp; <a href={companyLink} target='_blank' className='text-primary dark:text-primaryDark capitalize'>{ company }</a>
