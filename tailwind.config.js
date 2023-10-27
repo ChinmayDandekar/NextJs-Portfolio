@@ -48,6 +48,10 @@ module.exports = {
         circularDarkXs:
           "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 4px,#1b1b1b 30px)",
       },
+      boxShadow: {
+        'inner-dark': 'inset 5px 5px 0px 0 rgba(0, 0, 255, 0.6);',
+      }
+
     },
     screens: {
       "2xl": { max: "1535px" },
@@ -71,4 +75,3 @@ module.exports = {
   },
   plugins: [],
 }
-
