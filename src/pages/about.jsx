@@ -83,19 +83,19 @@ const about = () => {
                         <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row  md:order-3'>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-6xl sm:tet-5xl xs:text-4xl'>
-                                    <AnimatedNumbers value={50} />+
+                                    <AnimatedNumbers value={1} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>satified clients</h2>
                             </div>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold  md:text-6xl sm:tet-5xl xs:text-4xl'>
-                                    <AnimatedNumbers value={40} />+
+                                    <AnimatedNumbers value={10} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>projects completed</h2>
                             </div>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold  md:text-6xl sm:tet-5xl xs:text-4xl'>
-                                    <AnimatedNumbers value={4} />+
+                                    <AnimatedNumbers value={2} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>years of experience</h2>
                             </div>
