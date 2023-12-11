@@ -4,6 +4,9 @@ import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import { GithubIcon } from '@/components/Icons'
 import project1 from "../../public/images/projects/netflix-clone-ss.png"
+import project2 from "../../public/images/projects/PasswordManager.png"
+import project3 from "../../public/images/projects/Portfolio Website SS.png"
+import project4 from "../../public/images/projects/Project Encrypt it SS.png"
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -57,7 +60,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ type, title, summary, img, link, github }) => {
     return (
-        <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light dark:bg-dark dark:border-light p-6 relative
+        <article className='w-full h-auto flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light dark:bg-dark dark:border-light p-6 relative
             xs:p-4
         '>
             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light
@@ -67,7 +70,7 @@ const Project = ({ type, title, summary, img, link, github }) => {
             <Link href={link} target="_blank"
                 className='w-full cursor-pointer overflow-hidden rounded-lg'
             >
-                <FramerImage src={img} alt={title} className='w-full h-auto '
+                <FramerImage src={img} alt={title} className='w-full h-auto  '
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                 />
@@ -120,67 +123,41 @@ const projects = () => {
 
                             />
                         </div>
+                        
                         <div className='col-span-6 sm:col-span-12'>
                             <Project
-                                title="Crypto Screener Application"
-                                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                                         local currency."
-                                link='/'
-                                github='/'
+                                title="
+                                Project Encrypt It"
+                                summary="Encrypt it is an file and text encryption software developed using Java. The encrypted files can be decrypted only in the app with the same secret key which was used encrypt the files."
+                                link='https://github.com/ChinmayDandekar/Project-ENCRYPT-IT'
+                                github='https://github.com/ChinmayDandekar/Project-ENCRYPT-IT'
                                 type="Featured Project"
-                                img={project1}
+                                img={project4}
                             />
                         </div>
                         <div className='col-span-6 sm:col-span-12'>
                             <Project
-                                title="Crypto Screener Application"
-                                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                                         local currency."
+                                title="
+                                Portfolio Website"
+                                summary="This is my personal portfolio website which showcases my skills in Web Development. It is a fully responsive website and also has dark mode."
                                 link='/'
-                                github='/'
+                                github='https://github.com/ChinmayDandekar/NextJs-Portfolio'
                                 type="Featured Project"
-                                img={project1}
+                                img={project3}
                             />
                         </div>
+                        
                         <div className='col-span-12'>
                             <FeaturedProject
-                                title="Crypto Screener Application"
-                                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                                        It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                                        local currency."
-                                link='/'
-                                github='/'
+                                title="Password Manager Website"
+                                summary="Its a Password Manager Web Application built using Python and Django framework. It can securely store users passwords and documents by encrypting them first and storing it systematically in the database.."
+                                link='https://github.com/ChinmayDandekar/PasswordManager'
+                                github='https://github.com/ChinmayDandekar/PasswordManager'
                                 type="Featured Project"
-                                img={project1}
-
+                                img={project2}
                             />
                         </div>
-                        <div className='col-span-6 sm:col-span-12'>
-                            <Project
-                                title="Crypto Screener Application"
-                                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                                         local currency."
-                                link='/'
-                                github='/'
-                                type="Featured Project"
-                                img={project1}
-                            />
-                        </div>
-                        <div className='col-span-6 sm:col-span-12'>
-                            <Project
-                                title="Crypto Screener Application"
-                                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                                         local currency."
-                                link='/'
-                                github='/'
-                                type="Featured Project"
-                                img={project1}
-                            />
-                        </div>
+                
                     </div>
                 </Layout>
             </main>
