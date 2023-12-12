@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import Layout from '@/components/Layout'
-import AnimatedText from '@/components/AnimatedText'
-import { GithubIcon } from '@/components/Icons'
+import Layout from '@/components/global/Layout'
+import AnimatedText from '@/components/global/AnimatedText'
+import { GithubIcon } from '@/components/global/Icons'
 import project1 from "../../public/images/projects/netflix-clone-ss.png"
 import project2 from "../../public/images/projects/PasswordManager.png"
 import project3 from "../../public/images/projects/Portfolio Website SS.png"
@@ -10,7 +10,7 @@ import project4 from "../../public/images/projects/Project Encrypt it SS.png"
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import TransitionEffect from '@/components/TransitionEffect'
+import TransitionEffect from '@/components/global/TransitionEffect'
 
 const FramerImage = motion(Image);
 
@@ -32,11 +32,11 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 />
-           
+
             </Link>
             <div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6'>
                 <span className='text-primary dark:text-primaryDark font-medium text-xl xs:text-base '>{type}</span>
-                <Link href={link} target="_blank"  className='hover:underline underline-offset-2'>
+                <Link href={link} target="_blank" className='hover:underline underline-offset-2'>
                     <h2 className='my-2 w-full text-left text-4xl text-dark dark:text-light font-bold sm:text-sm'>{title}</h2>
                 </Link>
                 <p className=' my-2 font-medium text-dark dark:text-light sm:text-sm'>{summary}</p>
@@ -82,7 +82,7 @@ const Project = ({ type, title, summary, img, link, github }) => {
                 </Link>
 
                 <div className='w-full mt-2 flex items-center justify-between '>
-                    <Link href={link} target='_blank' 
+                    <Link href={link} target='_blank'
                         className=' text-lg font-semibold underline text-dark dark:text-light md:text-base'
                     >
                         Visit
@@ -123,7 +123,7 @@ const projects = () => {
 
                             />
                         </div>
-                        
+
                         <div className='col-span-6 sm:col-span-12'>
                             <Project
                                 title="
@@ -146,7 +146,7 @@ const projects = () => {
                                 img={project3}
                             />
                         </div>
-                        
+
                         <div className='col-span-12'>
                             <FeaturedProject
                                 title="Password Manager Website"
@@ -157,7 +157,7 @@ const projects = () => {
                                 img={project2}
                             />
                         </div>
-                
+
                     </div>
                 </Layout>
             </main>

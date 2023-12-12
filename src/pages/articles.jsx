@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import Layout from '@/components/Layout'
-import AnimatedText from '@/components/AnimatedText'
+import Layout from '@/components/global/Layout'
+import AnimatedText from '@/components/global/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
 import article1 from '../../public/images/articles/pagination component in reactjs.jpg'
@@ -11,7 +11,7 @@ import article4 from '../../public/images/articles/form validation in reactjs us
 import article5 from '../../public/images/articles/smooth scrolling in reactjs.png'
 import { motion, useMotionValue } from 'framer-motion';
 import { useRef } from 'react'
-import TransitionEffect from '@/components/TransitionEffect'
+import TransitionEffect from '@/components/global/TransitionEffect'
 
 const FramerImage = motion(Image);
 
@@ -110,7 +110,7 @@ const articles = () => {
             <Head>
                 <title> Chinmay Dandekar | Articles Page
 
-                  
+
                 </title>
                 <meta name="description" content="any description" />
             </Head>

@@ -1,6 +1,6 @@
-import AnimatedText from '@/components/AnimatedText'
-import Layout from '@/components/Layout'
-import Skills from '@/components/Skills'
+import AnimatedText from '@/components/global/AnimatedText'
+import Layout from '@/components/global/Layout'
+import Skills from '@/components/about/Skills'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
@@ -8,9 +8,9 @@ import ProfilePic from '../../public/images/profile/Chinmay.jpg'
 import { useRef } from 'react'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect } from 'react'
-import Education from '@/components/Education'
-import Experience from '@/components/Experience'
-import TransitionEffect from '@/components/TransitionEffect'
+import Education from '@/components/about/Education'
+import Experience from '@/components/about/Experience'
+import TransitionEffect from '@/components/global/TransitionEffect'
 
 const AnimatedNumbers = ({ value }) => {
     const ref = useRef(null)
