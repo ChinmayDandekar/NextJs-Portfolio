@@ -61,7 +61,7 @@ const contact = () => {
 
 						</div>
 
-						<div className='col-span-4 w-[70%]  h-auto  mx-auto p-8 flex flex-col items-start justify-center relative rounded-2xl  bg-light dark:bg-dark  lg:col-span-8 lg:items-center lg:w-full sm:my-8'>
+						<div className='col-span-4 w-[70%]  h-auto  mx-auto p-8 flex flex-col items-start justify-center relative rounded-2xl  bg-light dark:bg-dark  lg:col-span-8 lg:items-center lg:my-8 lg:w-full'>
 							<div className=' text-dark  font-bold text-3xl  mb-6 sm:text-2xl   dark:text-light'>
 								Chinmay Dandekar
 							</div>
