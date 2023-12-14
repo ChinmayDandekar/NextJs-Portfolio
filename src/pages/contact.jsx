@@ -61,7 +61,7 @@ const contact = () => {
 			<TransitionEffect />
 			<main className='flex w-full flex-col items-center justify-center dark:text-light'>
 				<Layout className="pt-4">
-					<AnimatedText className='text-6xl lg:text-4xl xs:text-3xl' text={"Get In Touch."} />
+					<AnimatedText className='!text-6xl lg:!text-5xl md:!text-4xl xs:!text-3xl' text={"Get In Touch."} />
 					<div className='grid grid-cols-8 w-full  h-auto py-10 '>
 
 						<div
@@ -101,7 +101,7 @@ const contact = () => {
 
 						</div>
 
-						<div className='col-span-4 w-[70%]  h-auto  mx-auto p-8 flex flex-col items-start justify-center relative rounded-2xl  bg-light dark:bg-dark  lg:col-span-8 lg:items-center lg:my-8 lg:w-full sm:w-full sm:p-4'>
+						<div className='col-span-4 w-full  h-auto  ml-16 p-8 flex flex-col items-start justify-center relative rounded-2xl  bg-light dark:bg-dark  lg:col-span-8 lg:items-center lg:my-8 lg:ml-0  sm:p-4'>
 							<div className=' text-dark  font-bold text-3xl  mb-6 sm:text-2xl xs:text-xl sm:mb-3  dark:text-light'>
 								Chinmay Dandekar
 							</div>
