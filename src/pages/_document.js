@@ -13,6 +13,8 @@ export default function Document() {
     document.documentElement.classList.remove('dark')
   }`}
         </Script>
+        
+
         <Main />
         <NextScript />
       </body>
