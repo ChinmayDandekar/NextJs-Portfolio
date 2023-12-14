@@ -4,12 +4,10 @@ import TransitionEffect from '@/components/global/TransitionEffect';
 import Layout from '@/components/global/Layout';
 import Head from 'next/head';
 import AnimatedText from '@/components/global/AnimatedText';
-import Link from 'next/link';
 import { GithubIcon, LinkedInIcon } from '@/components/global/Icons';
 import { SiIndeed } from "react-icons/si";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
-import Script from 'next/script';
 
 
 
@@ -74,16 +72,23 @@ const contact = () => {
 								action="https://formsubmit.co/8392485cd83b4be29a262fe0d3976c14" method="POST"
 								// onSubmit={handleSubmit}
 								className=' w-full  h-max mx-auto  flex flex-col gap-6 items-start justify-center  bg-light dark:bg-dark  lg:col-span-8'>
+									{/*  Honey Pot  */}
+								<input type="text" name="_honey" className='hidden' />
+
+								{/* Disable Captcha */}
+								<input type="hidden" name="_captcha" value="false" />
+
+								<input type="hidden" name="_next" value="" />
 
 								<div className='  w-full h-auto'>
-									<input name="name" onChange={(e) => setName(e.target.value)} value={name}  type="text" placeholder='Name' className=' w-full h-auto py-3 px-5 bg-light border-2 border-solid border-primary placeholder-dark/70 dark:placeholder-light/75 outline-none rounded-md text-dark/75  text-lg lg:text-sm lg:px-3 font-medium dark:text-light dark:border-primaryDark dark:bg-dark' />
+									<input required name="name" onChange={(e) => setName(e.target.value)} value={name}  type="text" placeholder='Name' className=' w-full h-auto py-3 px-5 bg-light border-2 border-solid border-primary placeholder-dark/70 dark:placeholder-light/75 outline-none rounded-md text-dark/75  text-lg lg:text-sm lg:px-3 font-medium dark:text-light dark:border-primaryDark dark:bg-dark' />
 								</div>
 								<div className='  w-full h-auto'>
-									<input name="email" onChange={(e) => setEmail(e.target.value)} value={email}  type="email" placeholder='Email' className=' w-full h-auto py-3 px-5 bg-light border-2 border-solid border-primary placeholder-dark/70 dark:placeholder-light/75 outline-none rounded-md text-dark/75  text-lg lg:text-sm lg:px-3 font-medium dark:text-light dark:border-primaryDark dark:bg-dark' />
+									<input required name="email" onChange={(e) => setEmail(e.target.value)} value={email}  type="email" placeholder='Email' className=' w-full h-auto py-3 px-5 bg-light border-2 border-solid border-primary placeholder-dark/70 dark:placeholder-light/75 outline-none rounded-md text-dark/75  text-lg lg:text-sm lg:px-3 font-medium dark:text-light dark:border-primaryDark dark:bg-dark' />
 
 								</div>
 								<div className='w-full h-auto'>
-									<textarea name="message" onChange={(e) => setMessage(e.target.value)} value={message}  type="text" placeholder='Message' className=' w-full h-auto py-3 px-5 bg-light border-2 border-solid border-primary placeholder-dark/70 dark:placeholder-light/75 outline-none rounded-md text-dark/75  text-lg lg:text-sm lg:px-3 font-medium dark:text-light dark:border-primaryDark dark:bg-dark' />
+									<textarea required name="message" onChange={(e) => setMessage(e.target.value)} value={message}  type="text" placeholder='Message' className=' w-full h-auto py-3 px-5 bg-light border-2 border-solid border-primary placeholder-dark/70 dark:placeholder-light/75 outline-none rounded-md text-dark/75  text-lg lg:text-sm lg:px-3 font-medium dark:text-light dark:border-primaryDark dark:bg-dark' />
 
 								</div>
 								<button type="submit" className=' bg-dark text-light p-2.5 px-6 rounded-lg text-base lg:text-sm font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark

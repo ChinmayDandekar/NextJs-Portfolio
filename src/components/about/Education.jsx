@@ -8,7 +8,7 @@ const Details = ({ degree, institution, time, place, grade }) => {
     const ref = useRef(null)
     return (
         <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[70%] pl-20 mx-auto flex flex-col items-start justify-between md:w-[80%] md:pl-10'>
-            <LiIcon reference={ref} />
+            <LiIcon  />
             <motion.div
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
