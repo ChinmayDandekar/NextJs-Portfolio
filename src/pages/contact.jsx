@@ -61,7 +61,7 @@ const contact = () => {
 			<TransitionEffect />
 			<main className='flex w-full flex-col items-center justify-center dark:text-light'>
 				<Layout className="pt-4">
-					<AnimatedText className='text-6xl lg:text-4xl' text={"Get In Touch."} />
+					<AnimatedText className='text-6xl lg:text-4xl xs:text-3xl' text={"Get In Touch."} />
 					<div className='grid grid-cols-8 w-full  h-auto py-10 '>
 
 						<div
@@ -78,7 +78,7 @@ const contact = () => {
 								{/* Disable Captcha */}
 								<input type="hidden" name="_captcha" value="false" />
 
-								<input type="hidden" name="_next" value="" />
+								{/* <input type="hidden" name="_next" value="" /> */}
 
 								<div className='  w-full h-auto'>
 									<input required name="name" onChange={(e) => setName(e.target.value)} value={name}  type="text" placeholder='Name' className=' w-full h-auto py-3 px-5 bg-light border-2 border-solid border-primary placeholder-dark/70 dark:placeholder-light/75 outline-none rounded-md text-dark/75  text-lg lg:text-sm lg:px-3 font-medium dark:text-light dark:border-primaryDark dark:bg-dark' />
@@ -101,20 +101,20 @@ const contact = () => {
 
 						</div>
 
-						<div className='col-span-4 w-[70%]  h-auto  mx-auto p-8 flex flex-col items-start justify-center relative rounded-2xl  bg-light dark:bg-dark  lg:col-span-8 lg:items-center lg:my-8 lg:w-full'>
-							<div className=' text-dark  font-bold text-3xl  mb-6 sm:text-2xl   dark:text-light'>
+						<div className='col-span-4 w-[70%]  h-auto  mx-auto p-8 flex flex-col items-start justify-center relative rounded-2xl  bg-light dark:bg-dark  lg:col-span-8 lg:items-center lg:my-8 lg:w-full sm:w-full sm:p-4'>
+							<div className=' text-dark  font-bold text-3xl  mb-6 sm:text-2xl xs:text-xl sm:mb-3  dark:text-light'>
 								Chinmay Dandekar
 							</div>
-							<div className='font-semibold text-base mb-1 text-dark lg:text-sm dark:text-light '>
-								<span className=''>Email</span>: <a href='mailto:chinmay2001.cd@gmail.com' className=' text-primary dark:text-primaryDark underline decoration-[1px] underline-offset-4   '>chinmay2001.cd@gmail.com</a>
+							<div className='font-semibold text-base mb-1 text-dark lg:text-sm xs:text-sm dark:text-light '>
+								<span className='inline sm:hidden'>Email:</span> <a href='mailto:chinmay2001.cd@gmail.com' className=' text-primary dark:text-primaryDark underline decoration-[1px] underline-offset-4   '>chinmay2001.cd@gmail.com</a>
 							</div>
-							<div className='font-semibold text-base my-1  text-dark lg:text-sm dark:text-light '>
+							<div className='font-semibold text-base my-1  text-dark lg:text-sm xs:text-sm dark:text-light '>
 								Phone: <span className='' >+91 9673236656</span>
 							</div>
-							<div className='font-semibold text-base my-1 text-dark lg:text-sm dark:text-light '>
+							<div className='font-semibold text-base my-1 text-dark lg:text-sm xs:text-sm dark:text-light '>
 								Pincode: 401303
 							</div>
-							<div className='font-semibold text-base mt-1 text-dark lg:text-sm dark:text-light '>
+							<div className='font-semibold text-base mt-1 text-dark lg:text-sm xs:text-sm dark:text-light '>
 								Mumbai <span className='text-primary dark:text-primaryDark font-bold'>|</span> Maharashtra <span className='text-primary dark:text-primaryDark font-bold'>|</span> India
 							</div>
 
