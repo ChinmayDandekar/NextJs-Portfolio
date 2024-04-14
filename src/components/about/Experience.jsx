@@ -21,9 +21,14 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
                 <span className='capitalize font-medium text-dark/70 dark:text-light/75  xs:text-sm'>
                     {time} | {address}
                 </span>
-                <p className='font-medium w-full xs:text-sm'>
-                    {work}
-                </p>
+                <ul className='list-disc	'>
+
+                    {work.map((line) => {
+                       return  <li className='font-medium w-full xs:text-sm'>
+                            {line}
+                        </li>
+                    })}
+                </ul>
             </motion.div>
         </li>
     )
@@ -52,6 +57,16 @@ const Experience = () => {
                   ' />
                 <ul className='w-full flex flex-col items-start justify-between xs:ml-2 ' >
                     <Details
+                        position='Next Js Developer'
+                        company="@Techknit Industries"
+                        companyLink=""
+                        time="Dec 2023-Present"
+                        address=" Mumbai, Maharashtra"
+                        work={["Led the development of stock market analysis games, showcasing innovation and technical skills."," Implemented efficient gameloop execution using Next.js serverless functions, cutting costs.", "Developed a real-time dashboard for admins to monitor user activity and adjust game rules instantly.", "Enhanced functionality with data visualization techniques and ensured robust data management using AWS S3."]}
+
+
+                    />
+                    {/* <Details
                         position='Software Engineer'
                         company="@Google"
                         companyLink=""
@@ -80,17 +95,7 @@ const Experience = () => {
                         work="Worked on a team responsible for developing new features for Google's 
                       search engine, including improving the accuracy and relevance of search results and 
                       developing new tools for data analysis and visualization."
-                    />
-                    <Details
-                        position='Software Engineer'
-                        company="@Google"
-                        companyLink=""
-                        time="2022-Present"
-                        address=" Mountain View, CA"
-                        work="Worked on a team responsible for developing new features for Google's 
-                      search engine, including improving the accuracy and relevance of search results and 
-                      developing new tools for data analysis and visualization."
-                    />
+                    /> */}
                 </ul>
             </div>
         </div>
