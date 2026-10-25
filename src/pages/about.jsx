@@ -8,6 +8,7 @@ import ProfilePic from '../../public/images/profile/Chinmay pic.jpg'
 import { useRef } from 'react'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Education from '@/components/about/Education'
 import Experience from '@/components/about/Experience'
 import TransitionEffect from '@/components/global/TransitionEffect'
@@ -42,6 +43,18 @@ const AnimatedNumbers = ({ value }) => {
 
 
 const about = () => {
+    const router = useRouter()
+
+    useEffect(() => {
+        if (!router.isReady) return
+        const hash = router.asPath.split('#')[1]
+        if (!hash) return
+        const timeout = setTimeout(() => {
+            document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' })
+        }, 600)
+        return () => clearTimeout(timeout)
+    }, [router.isReady, router.asPath])
+
     return (
         <>
             <Head>
@@ -57,19 +70,16 @@ const about = () => {
                         <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4  md:order-2 md:col-span-8'>
                             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75 '>Biography</h2>
                             <p className='font-medium'>
-                                Hi, I&apos;m Chinmay Dandekar, a web developer and UI/UX designer with a passion for creating beautiful, functional,
-                                and user-centered digital experiences. With 2 years of experience in the field. I am always looking for
-                                new and innovative ways to bring my clients&apos; visions to life.
+                                Hi, I&apos;m Chinmay Dandekar, a Software Developer with 3+ years of experience building production-grade applications across backend, full-stack, and product engineering.
                             </p>
                             <p className='font-medium my-4'>
-                                I believe that design is about more than just making things look pretty - it&apos;s about solving problems and
-                                creating intuitive, enjoyable experiences for users.
+                                Currently, I work on a microservices-based cybersecurity product, owning and maintaining the SBOM (Software Bill of Materials) module. My work spans Node.js, Express.js, Docker, Redis, CI/CD integrations, enterprise authentication, vulnerability management, and software supply chain security.
+                            </p>
+                            <p className='font-medium my-4'>
+                                I enjoy solving complex engineering problems around performance, scalability, and reliability. From optimizing large-scale SBOM report generation to building enterprise integrations and security features, I like understanding systems end-to-end and turning challenging requirements into maintainable solutions.
                             </p>
                             <p className='font-medium'>
-                                Whether I&apos;m working on a website, mobile app, or
-                                other digital product, I bring my commitment to design excellence and user-centered thinking to
-                                every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
-
+                                I also work closely with QA, DevOps, clients, and junior developers, giving me experience beyond implementation and across the complete product development lifecycle.
                             </p>
                         </div>
                         <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-8 xl:col-span-4 xl:items-center md:order-1 md:col-span-8' >
@@ -83,7 +93,7 @@ const about = () => {
                         <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row  md:order-3'>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-6xl sm:tet-5xl xs:text-4xl'>
-                                    <AnimatedNumbers value={1} />+
+                                    <AnimatedNumbers value={10} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>satified clients</h2>
                             </div>
@@ -95,7 +105,7 @@ const about = () => {
                             </div>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold  md:text-6xl sm:tet-5xl xs:text-4xl'>
-                                    <AnimatedNumbers value={2} />+
+                                    <AnimatedNumbers value={3} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>years of experience</h2>
                             </div>
